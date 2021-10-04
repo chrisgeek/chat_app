@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   namespace :api, defaults: { format: :json } do
     resources :users, only: %w[show index]
+    resources :messages
+    resources :groups do
+      post 'join_group', on: :member
+    end
   end
 
   devise_for :users,

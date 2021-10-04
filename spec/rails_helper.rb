@@ -55,6 +55,9 @@ RSpec.configure do |config|
   # Filter lines from Rails gems in backtraces.
   config.filter_rails_from_backtrace!
 
+  # include `Warden::Proxy` instance
+  config.include Devise::Test::ControllerHelpers, type: :controller
+
   # Add FactoryBot Syntax Methods
   config.include FactoryBot::Syntax::Methods
 end

@@ -8,7 +8,6 @@ gem 'jsonapi-rails'
 gem 'devise', '~> 4.7'
 gem 'devise-jwt', '~> 0.7'
 
-gem 'cancancan'
 gem 'rolify'
 
 gem 'pg', '~> 1.1'

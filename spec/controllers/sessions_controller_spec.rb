@@ -6,7 +6,7 @@ describe SessionsController, type: :request do
   let(:login_url) { '/api/login' }
   let(:logout_url) { '/api/logout' }
 
-  context 'When logging in' do
+  describe 'Login user' do
     before do
       login_with_api(user)
     end
@@ -20,7 +20,7 @@ describe SessionsController, type: :request do
     end
   end
 
-  context 'When password is missing' do
+  describe 'When password is missing' do
     before do
       post login_url, params: {
         user: {
@@ -36,7 +36,7 @@ describe SessionsController, type: :request do
 
   end
 
-  context 'When logging out' do
+  describe 'When logging out' do
     it 'returns 204' do
       delete logout_url
 

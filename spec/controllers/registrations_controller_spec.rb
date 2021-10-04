@@ -6,7 +6,7 @@ describe RegistrationsController, type: :request do
   let(:existing_user) { create(:user) }
   let(:signup_url) { '/api/signup' }
 
-  context 'When creating a new user' do
+  describe 'Creating a new user' do
     before do
       post signup_url, params: {
         user: {
@@ -29,7 +29,7 @@ describe RegistrationsController, type: :request do
     end
   end
 
-  context 'When an email already exists' do
+  describe 'When an email already exists' do
     before do
       post signup_url, params: {
         user: {
